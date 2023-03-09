@@ -20,5 +20,8 @@ help: ##@Miscellaneous Show this help
 run-dev: ##@Container Build and run node container
 	docker-compose up -d --build node-dev
 
+shell-dev: ##@Container SHH in container
+	docker-compose exec node-dev /bin/bash
+
 logs: ##@Container Show logs in container
 	docker-compose logs
