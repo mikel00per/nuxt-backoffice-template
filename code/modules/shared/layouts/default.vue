@@ -9,7 +9,9 @@
 
       <v-app-bar title="Application bar"></v-app-bar>
 
-      <v-main style="min-height: 300px;"></v-main>
+      <v-main style="min-height: 300px;">
+        <NuxtPage/>
+      </v-main>
     </v-layout>
   </v-app>
 </template>
