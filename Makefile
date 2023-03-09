@@ -23,6 +23,9 @@ run-dev: ##@Container Build and run node container
 shell-dev: ##@Container SHH in container
 	docker-compose exec node-dev /bin/bash
 
+destroy: ##@Container Remove all data related with node container
+	docker-compose down --rmi local
+
 logs: ##@Container Show logs in container
 	docker-compose logs
 
