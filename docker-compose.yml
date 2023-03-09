@@ -1,0 +1,9 @@
+version: "3.9"
+
+services:
+  node-dev:
+    image: mikel00per/node-alpine-development
+    ports:
+      - "3000:3000"
+    volumes:
+      - ./code:/code
