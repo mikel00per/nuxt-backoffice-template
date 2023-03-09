@@ -25,3 +25,9 @@ shell-dev: ##@Container SHH in container
 
 logs: ##@Container Show logs in container
 	docker-compose logs
+
+lint: ##@Code Show linter errors
+	docker-compose exec node-dev npm run lint
+
+lint-fix: ##@Code Fix linter errors
+	docker-compose exec node-dev npm run lint:fix
