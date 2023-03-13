@@ -3,6 +3,7 @@ export default defineNuxtConfig({
     pages: true,
     modules: [
         '@pinia/nuxt',
+        '@pinia-plugin-persistedstate/nuxt',
         '~/modules/shared/index',
         '~/modules/home/index',
     ],
