@@ -2,14 +2,20 @@
 export default defineNuxtConfig({
     pages: true,
     modules: [
-        '@pinia/nuxt',
-        '@pinia-plugin-persistedstate/nuxt',
         '~/modules/shared/index',
         '~/modules/home/index',
+        '~/modules/auth/index',
+        '@pinia/nuxt',
+        '@pinia-plugin-persistedstate/nuxt',
+        'nuxt-vue3-google-signin',
     ],
+    googleSignIn: {
+        clientId: '83260906410-h17am992nfmu31e6ig6f1msn293v1411.apps.googleusercontent.com'
+    },
     dir: {
         layouts: './modules/shared/layouts/',
-        plugins: './modules/shared/plugins/'
+        plugins: './modules/shared/plugins/',
+        middleware: './modules/shared/middlewares/'
     },
     css: [
         'vuetify/lib/styles/main.sass',
