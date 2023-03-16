@@ -1,5 +1,11 @@
 <script setup>
-
+definePageMeta({
+  name: 'HomePage',
+  middleware: [
+    'authenticated',
+    'authenticated-expired'
+  ],
+});
 </script>
 
 <template>
