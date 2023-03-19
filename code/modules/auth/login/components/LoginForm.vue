@@ -2,18 +2,19 @@
   <v-form validate-on="submit">
     <v-text-field
       :rules="[rules.required, rules.min]"
-      label="User name"
-      hint="At least 8 characters"
+      :label="$t('User name')"
+      :hint="$t('At least 8 characters')"
       class="mb-2 text-left"
       single-line
     >
       <template #prepend-inner>
-        <v-tooltip location="bottom">
+        <v-tooltip
+          location="bottom"
+          :v-text="$t('I\'m a tooltip')"
+        >
           <template #activator="">
             <v-icon icon="mdi-account" />
           </template>
-
-          I'm a tooltip
         </v-tooltip>
       </template>
     </v-text-field>
@@ -21,18 +22,19 @@
       :rules="[rules.required, rules.min]"
       :type="show1 ? 'text' : 'password'"
       class="text-left"
-      label="Password"
-      hint="At least 8 characters"
+      :label="$t('Password')"
+      :hint="$t('At least 8 characters')"
       counter
       clearable
     >
       <template #prepend-inner>
-        <v-tooltip location="bottom">
+        <v-tooltip
+          location="bottom"
+          :v-text="$t('I\'m a tooltip')"
+        >
           <template #activator="{}">
             <v-icon icon="mdi-lock" />
           </template>
-
-          I'm a tooltip
         </v-tooltip>
       </template>
 
@@ -50,7 +52,7 @@
       type="submit"
       class="mt-2"
     >
-      Login
+      {{ $t('Login') }}
     </v-btn>
   </v-form>
 </template>
@@ -62,11 +64,11 @@ export default {
     return {
       show1: false,
       show2: true,
-      password: 'Password',
+      password: this.$t('Password'),
       rules: {
-        required: value => !!value || 'Required.',
-        min: v => v.length >= 8 || 'Min 8 characters',
-        emailMatch: () => (`The email and password you entered don't match`),
+        required: value => !!value || this.$t('Required'),
+        min: v => v.length >= 8 || this.$t('Min 8 characters'),
+        emailMatch: () => this.$t('The email and password you entered don\'t match'),
       },
     }
   },
