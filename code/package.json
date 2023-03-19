@@ -7,13 +7,17 @@
     "preview": "nuxt preview",
     "postinstall": "nuxt prepare",
     "lint": "eslint .",
-    "lint:fix": "eslint . --fix"
+    "lint:fix": "eslint . --fix",
+    "i18n:report": "vue-i18n-extract report --vueFiles './modules/**/*.?(js|vue)' --languageFiles './modules/shared/i18n/*.?(json|yml|yaml|js)'",
+    "i18n:generate": "vue-i18n-extract report --vueFiles './modules/**/*.?(js|vue)' --languageFiles './modules/shared/i18n/*.?(json|yml|yaml|js)' --add"
   },
   "devDependencies": {
     "@nuxt/eslint-config": "^0.1.1",
+    "@nuxtjs/i18n": "^8.0.0-beta.10",
     "@pinia-plugin-persistedstate/nuxt": "^1.0.0",
     "eslint": "^8.35.0",
-    "nuxt": "^3.2.3"
+    "nuxt": "^3.2.3",
+    "vue-i18n-extract": "^2.0.7"
   },
   "dependencies": {
     "@mdi/font": "^7.1.96",
