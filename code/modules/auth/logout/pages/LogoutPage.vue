@@ -33,22 +33,22 @@ auth.logout();
         v-if="!isExpired"
         class="text-h5 mb-6 font-weight-black"
       >
-        You have been logged out
+        {{ $t('You have been logged out') }}
       </h2>
 
       <h2
         v-else
         class="text-h5 mb-6 font-weight-black"
       >
-        Your session is expired
+        {{ $t('Your session is expired') }}
       </h2>
 
       <h3 class="mb-4">
-        Your information has been deleted.
+        {{ $t('Your information has been deleted') }}
       </h3>
 
       <p class="mb-4 text-medium-emphasis text-body-2">
-        Thank you.
+        {{ $t('Thank you') }}.
       </p>
 
       <div class="text-end">
@@ -56,7 +56,7 @@ auth.logout();
           variant="text"
           to="/login"
         >
-          Go to Login
+          {{ $t('Go to Login') }}}
         </v-btn>
       </div>
     </v-sheet>

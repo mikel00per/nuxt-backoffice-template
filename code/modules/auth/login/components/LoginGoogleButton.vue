@@ -17,7 +17,7 @@ const { isReady, login } = useAuthStore().useTokenClient();
     <template #prepend>
       <v-icon icon="mdi-google" />
     </template>
-    Sign with Google
+    {{ $t('Sign with Google') }}
   </v-btn>
 </template>
 

@@ -1,3 +1,7 @@
+<script setup>
+
+</script>
+
 <template>
   <v-card
     max-width="600"
@@ -6,7 +10,7 @@
   >
     <v-toolbar color="black">
       <v-toolbar-title class="text-center text-h6">
-        👋 Welcome
+        👋 {{ $t('Welcome') }}
       </v-toolbar-title>
     </v-toolbar>
 
