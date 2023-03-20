@@ -1,13 +1,21 @@
 <script setup lang="ts">
 
-
 import {useLanguage} from "~/modules/shared/store/language";
+import {useTheme} from "~/modules/shared/store/theme";
+import {useTheme as vuetifyTheme} from 'vuetify'
 
 const {setLocale} = useI18n();
 const language = useLanguage();
+const theme = useTheme();
+const vuetify = vuetifyTheme();
 
 const changeLanguage = (code: string) => {
   setLocale(code);
+}
+
+function toggleTheme() {
+  theme.toggle();
+  vuetify.global.name.value = theme.modeSelected;
 }
 </script>
 
@@ -21,6 +29,10 @@ const changeLanguage = (code: string) => {
       </v-navigation-drawer>
 
       <v-app-bar title="Application bar">
+        <v-btn
+          :icon="theme.isDark ? 'mdi-weather-night' : 'mdi-weather-sunny'"
+          @click="toggleTheme"
+        />
         <v-menu>
           <template #activator="{ props }">
             <v-btn
