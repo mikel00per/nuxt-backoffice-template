@@ -56,7 +56,7 @@ auth.logout();
           variant="text"
           to="/login"
         >
-          {{ $t('Go to Login') }}}
+          {{ $t('Go to Login') }}
         </v-btn>
       </div>
     </v-sheet>
